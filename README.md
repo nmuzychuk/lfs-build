@@ -1,4 +1,6 @@
 # LFS Build
+[![Build Status](https://travis-ci.org/nmuzychuk/lfs-build.svg?branch=master)](https://travis-ci.org/nmuzychuk/lfs-build)
+
 LFS Build is a tool which automatically builds and configures a [Linux from Scratch](http://www.linuxfromscratch.org/lfs/) system.
 
 ## Information
@@ -68,3 +70,6 @@ Static code analysis is used. Requires [ShellCheck](https://github.com/koalaman/
 ```console
 bash lfs.sh test
 ```
+
+## License
+[MIT](LICENSE)

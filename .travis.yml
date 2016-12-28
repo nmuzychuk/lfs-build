@@ -1,0 +1,13 @@
+language: c
+
+addons:
+  apt:
+    sources:
+    - debian-sid
+    packages:
+    - shellcheck
+
+before_script:
+  - shellcheck -V
+
+script: bash lfs.sh test

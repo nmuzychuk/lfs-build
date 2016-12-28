@@ -10,9 +10,13 @@ function build_lfs() {
   export LFS=/mnt/lfs
 
   # Preparing for the Build
+  #
+  # shellcheck source=/dev/null
   source "$PREPARE_BUILD_DIR/prepare_build.sh"
 
   # Preparing Virtual Kernel File Systems
+  #
+  # shellcheck source=/dev/null
   source "$BUILD_LFS_DIR/prepare_lfs.sh"
 
   # Installing Basic System Software
