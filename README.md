@@ -1,14 +1,15 @@
 # LFS Build
-[![Build Status](https://travis-ci.org/nmuzychuk/lfs-build.svg?branch=master)](https://travis-ci.org/nmuzychuk/lfs-build)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d76fc92f5fc64747a42fd3cb71930aa0)](https://www.codacy.com/app/nmuzychuk/lfs-build)
 
 LFS Build is a tool which automatically builds and configures a [Linux from Scratch](http://www.linuxfromscratch.org/lfs/) system.
 
 ## Overview
 The tool is applicable to LFS version 7.10. The following software is used:
-* Linux-4.7.2
-* Glibc 2.24
-* GCC 6.2.0
-* Bash-4.3.30
+* linux-4.7.2
+* glibc-2.24
+* gcc-6.2.0
+* bash-4.3.30
+* grub-2.02
 
 Building your own Linux system from source is a time-consuming process. Here are some real-world examples of how long it may take:
 
@@ -18,7 +19,7 @@ Building your own Linux system from source is a time-consuming process. Here are
 | Intel Atom, HDD    | 385m32.365s   |
 
 ## Getting started
-[Vagrant](https://www.vagrantup.com/) is required.
+Vagrant is required.
 
 ### Build
 Create a new virtual machine. Additional disk is automatically created for a new LFS installation
@@ -63,12 +64,6 @@ bash lfs.sh clean
 ```
 ```console
 rm -f box-disk2.vmdk ROOT_PASS
-```
-
-### Test
-Static code analysis is used. Requires [ShellCheck](https://github.com/koalaman/shellcheck)
-```console
-bash lfs.sh test
 ```
 
 ## License
