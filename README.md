@@ -1,9 +1,9 @@
 # LFS Build
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/d76fc92f5fc64747a42fd3cb71930aa0)](https://www.codacy.com/app/nmuzychuk/lfs-build)
 
+## Overview
 LFS Build is a tool which automatically builds and configures a [Linux from Scratch](http://www.linuxfromscratch.org/lfs/) system.
 
-## Overview
 The tool is applicable to LFS version 7.10. The following software is used:
 * linux-4.7.2
 * glibc-2.24
@@ -19,15 +19,14 @@ Building your own Linux system from source is a time-consuming process. Here are
 | Intel Atom, HDD    | 385m32.365s   |
 
 ## Getting started
-Vagrant is required.
 
 ### Build
 Create a new virtual machine. Additional disk is automatically created for a new LFS installation
-```console
+```
 vagrant up
 ```
 Log in to the VM
-```console
+```
 vagrant ssh
 ```
 Build the system. The following command:
@@ -37,32 +36,28 @@ Build the system. The following command:
 * Builds the full LFS system
 * Installs kernel, bootloader and sets up configuration
 
-```console
+```
 bash /vagrant/lfs.sh build
 ```
 After the build is done you can examine and reconfigure your LFS system. Or just exit and leave the default settings
-```console
+```
 exit
 ```
 Gracefully shutdown the VM
-```console
+```
 vagrant halt
 ```
 Create a new virtual machine using the lfs disk file `box-disk2.vmdk`
 
 Obtain the root password
-```console
+```
 cat ROOT_PASS
 ```
 
 ### Clean up
-```console
+```
 vagrant destroy
-```
-```console
 bash lfs.sh clean
-```
-```console
 rm -f box-disk2.vmdk ROOT_PASS
 ```
 
